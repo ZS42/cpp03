@@ -6,7 +6,7 @@
 /*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:57 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/20 20:56:40 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/21 00:43:13 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
     // ScavTrap(unsigned int hp, unsigned int ep, unsigned int damage) : ClapTrap("", 100, 50, 20)
 }
 
-ScavTrap::ScavTrap(const ScavTrap &object)
+ScavTrap::ScavTrap(const ScavTrap &object) : ClapTrap(object)
 {
     std::cout << "ScavTrap copy constructor called" <<std::endl;
     *this = object;

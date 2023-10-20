@@ -6,7 +6,7 @@
 /*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:33 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/20 22:28:05 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/21 00:47:52 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ FragTrap::FragTrap(std::string name): ClapTrap(name)
     this->attackDamage = 30;
 }
 
-FragTrap::FragTrap(const FragTrap &object)
+FragTrap::FragTrap(const FragTrap &object) : ClapTrap(object)
 {
     std::cout << "FragTrap copy constructor called" <<std::endl;
     *this = object;
@@ -45,7 +45,7 @@ FragTrap& FragTrap::operator=(const FragTrap &object)
 
 FragTrap::~FragTrap()
 {
-    std::cout << "ScavTrap destructor called" <<std::endl;
+    std::cout << "FragTrap destructor called" <<std::endl;
 }
   
 void FragTrap::highFiveGuys()

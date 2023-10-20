@@ -6,7 +6,7 @@
 /*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 22:48:55 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/21 00:20:48 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/21 00:54:32 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ DiamondTrap::~DiamondTrap()
 
 void DiamondTrap::whoAmI(void)
 {
-	std::cout <<"I am a DiamondTrap. My name is  " << this->Name << " My ClapTrap name is "<< ClapTrap::name << std::endl;
+	std::cout <<"I am a DiamondTrap. My name is  " << this->Name << ". My ClapTrap name is "<< ClapTrap::name << std::endl;
 }
