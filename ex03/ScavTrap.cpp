@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
+/*   By: zsyyida <zsyyida@student42abudhabi.ae>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:57 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/21 00:44:05 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/21 20:57:36 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ ScavTrap::ScavTrap()
     std::cout << "ScavTrap default constructor called" <<std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name): ClapTrap(name) 
+ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
     std::cout << "ScavTrap constructor that takes a parameter called " << name << std::endl;
-    this->hitPoints = 100; 
-    this->energyPoints = 50; 
+    this->hitPoints = 100;
+    this->energyPoints = 50;
     this->attackDamage = 20;
     // ScavTrap(unsigned int hp, unsigned int ep, unsigned int damage) : ClapTrap("", 100, 50, 20)
 }
@@ -53,22 +53,22 @@ void ScavTrap::attack(const std::string& target)
 {
     if (hitPoints == 0 && energyPoints == 0)
     {
-        std::cout << "ClapTrap " << name << " can't do anything." << std::endl;
+        std::cout << "ScavTrap " << name << " can't do anything." << std::endl;
         return ;
     }
     if (hitPoints == 0 || energyPoints == 0)
     {
-        std::cout << "ClapTrap " << name << " can't attack." << std::endl;
+        std::cout << "ScavTrap " << name << " can't attack." << std::endl;
     }
     else
     {
-        std::cout << "ClapTrap " << name << " attacks " << target << " causing " << attackDamage << " points of damage!" << std::endl;
+        std::cout << "ScavTrap " << name << " attacks " << target << " causing " << attackDamage << " points of damage!" << std::endl;
         hitPoints = hitPoints - attackDamage;
     }
     energyPoints--;
     return ;
-}   
-  
+}
+
 void ScavTrap::guardGate()
 {
     std::cout << "ScavTrap " << this->name << " is now in Gatekeeper mode." << std::endl;
