@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
+/*   By: zsyyida <zsyyida@student42abudhabi.ae>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 22:48:55 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/21 00:54:32 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/21 20:52:50 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ DiamondTrap::DiamondTrap()
 {
     std::cout << "DiamondTrap default constructor called" <<std::endl;
 }
- 
+
 DiamondTrap::DiamondTrap(std::string name): ScavTrap(name), FragTrap(name)
 {
     std::cout << "DiamondTrap constructor that takes a parameter called " << name << std::endl;
     this->Name = name;
     ClapTrap::name = name + "_clap_name";
-    FragTrap::hitPoints = 100; 
-    ScavTrap::energyPoints = 50; 
+    FragTrap::hitPoints = 100;
+    ScavTrap::energyPoints = 50;
     FragTrap::attackDamage = 30;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &object)
+DiamondTrap::DiamondTrap(const DiamondTrap &object): ScavTrap(name), FragTrap(name)
 {
     std::cout << "DiamondTrap copy constructor called" <<std::endl;
     *this = object;
